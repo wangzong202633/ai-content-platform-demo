@@ -1,0 +1,16 @@
+{
+ "signals": [
+  {
+   "category": "色彩",
+   "rule_text": "主色调避免使用深色，采用浅色系",
+   "confidence": 0.9,
+   "evidence": "颜色太深"
+  },
+  {
+   "category": "风格",
+   "rule_text": "调整整体风格，使其符合面向全球市场的国际化定位",
+   "confidence": 0.9,
+   "evidence": "整体不够国际化，看着不像一家面向全球市场的企业"
+  }
+ ]
+}

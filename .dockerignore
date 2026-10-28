@@ -1,0 +1,9 @@
+node_modules
+frontend/node_modules
+frontend/dist
+backend/demo.db
+backend/demo.db-wal
+backend/demo.db-shm
+backend/cache
+backend/.env
+.git

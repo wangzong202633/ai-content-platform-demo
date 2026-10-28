@@ -1,0 +1,146 @@
+/* ════════════════════════════════════════════════════════════════
+   企业AI营销内容智能管理平台 · 设计系统「云白·雾蓝·国际范」
+   The platform itself embodies the boss's aesthetic:
+   light palette / generous whitespace / international restraint.
+   ════════════════════════════════════════════════════════════════ */
+
+:root {
+  --ink: #16303F;            /* 深墨蓝：标题文字 */
+  --ink-2: #4A6072;          /* 次级文字 */
+  --mist: #F4F7FA;           /* 云雾底 */
+  --line: #E3EBF1;           /* 分隔线 */
+  --brand: #2C6E8F;          /* 主色·雾蓝 */
+  --brand-deep: #1D3D52;     /* 深雾蓝 */
+  --brand-soft: #E9F2F7;     /* 主色浅底 */
+  --gold: #D9A441;           /* 点缀金（v1 深色版呼应） */
+  --card-shadow: 0 1px 3px rgba(16, 42, 67, 0.06), 0 1px 2px rgba(16, 42, 67, 0.04);
+  --card-shadow-lift: 0 10px 28px rgba(16, 42, 67, 0.13);
+}
+
+/* ── 页面过渡 ── */
+.fade-in { animation: fadeIn .35s cubic-bezier(.2, .7, .3, 1) both; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+
+/* ── 顶栏 ── */
+.app-header {
+  background: linear-gradient(120deg, var(--brand-deep) 0%, #265D7A 55%, #2C6E8F 100%) !important;
+  box-shadow: 0 2px 10px rgba(16, 42, 67, 0.18);
+  padding: 0 24px;
+}
+.app-logo {
+  width: 34px; height: 34px; border-radius: 9px;
+  background: linear-gradient(135deg, #7FC4E8, #2C6E8F);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 17px; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .25);
+}
+.app-title-wrap { line-height: 1.15; }
+.app-title { color: #fff; font-size: 16.5px; font-weight: 600; letter-spacing: .5px; margin: 0; }
+.app-subtitle {
+  color: rgba(255, 255, 255, .55); font-size: 9.5px; letter-spacing: 2.6px; margin-top: 2px;
+}
+.role-pill { background: rgba(255, 255, 255, .10); padding: 3px; border-radius: 10px; border: 1px solid rgba(255,255,255,.16); }
+.role-pill .ant-segmented { background: transparent !important; }
+.role-pill .ant-segmented-item { color: rgba(255, 255, 255, .78); }
+.role-pill .ant-segmented-item:hover { color: #fff; }
+.role-pill .ant-segmented-item-selected {
+  background: rgba(255, 255, 255, .16) !important;
+  color: #fff !important;
+  border: 1px solid rgba(255, 255, 255, .3);
+  box-shadow: none !important;
+}
+
+/* ── 侧栏 ── */
+.app-sider { border-right: 1px solid var(--line) !important; background: #fff !important; }
+.app-sider .ant-menu-item {
+  border-radius: 9px !important; margin: 4px 10px !important; width: calc(100% - 20px) !important;
+  color: var(--ink-2) !important; font-weight: 500;
+}
+.app-sider .ant-menu-item-selected {
+  background: var(--brand-soft) !important; color: var(--brand) !important; font-weight: 600;
+}
+.app-sider .ant-menu-item-selected .anticon { color: var(--brand); }
+.sider-caption { font-size: 10.5px; color: #A7B6C2; letter-spacing: 1.5px; padding: 14px 22px 4px; }
+.sider-foot { font-size: 11px; color: #A7B6C2; line-height: 1.8; padding: 0 22px; }
+
+/* ── 卡片 ── */
+.ant-card { border-radius: 12px !important; box-shadow: var(--card-shadow) !important; border: 1px solid var(--line) !important; }
+.card-hover { transition: transform .25s ease, box-shadow .25s ease; }
+.card-hover:hover { transform: translateY(-3px); box-shadow: var(--card-shadow-lift) !important; }
+
+/* ── 指标卡 ── */
+.stat-card { display: flex; gap: 14px; align-items: center; padding: 4px 2px; }
+.stat-icon {
+  width: 46px; height: 46px; border-radius: 12px; flex: none;
+  display: flex; align-items: center; justify-content: center; font-size: 21px;
+}
+.stat-value { font-size: 25px; font-weight: 700; color: var(--ink); line-height: 1.1; font-variant-numeric: tabular-nums; }
+.stat-label { font-size: 12.5px; color: var(--ink-2); margin-top: 3px; }
+.stat-delta { font-size: 11.5px; color: #8AA0B0; margin-top: 2px; }
+.stat-delta b { color: var(--brand); font-weight: 600; }
+.stat-delta .up { color: #2E9E5B; }
+.stat-delta .goal { color: #C0392B; }
+
+/* ── 内容类型卡（生成第一步） ── */
+.type-card { text-align: center; padding: 26px 18px !important; cursor: pointer; position: relative; overflow: hidden; }
+.type-card::after {
+  content: ''; position: absolute; inset: auto -30% -55% auto; width: 160px; height: 160px;
+  border-radius: 50%; background: var(--brand-soft); opacity: .7; transition: transform .3s;
+}
+.type-card:hover::after { transform: scale(1.25); }
+.type-card .ant-typography { position: relative; z-index: 1; }
+
+/* ── 流式生成区 ── */
+.stream-caret::after {
+  content: '▌'; color: var(--brand); animation: blink 1s steps(1) infinite; margin-left: 2px;
+}
+@keyframes blink { 50% { opacity: 0; } }
+
+/* ── 内容预览（design_hint 调色板） ── */
+.preview-card { position: relative; overflow: hidden; }
+.preview-card .kicker {
+  font-size: 10.5px; letter-spacing: 4px; opacity: .72; margin-bottom: 10px; font-weight: 600;
+}
+.preview-frame {
+  position: relative; border-radius: 14px; padding: 28px 32px; min-height: 220px;
+  box-shadow: 0 6px 22px rgba(16, 42, 67, .16);
+  transition: transform .25s ease;
+}
+.preview-frame:hover { transform: translateY(-2px); }
+.preview-meta { margin-top: 9px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+
+/* ── 渠道画框 ── */
+.channel-cell { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 10px; transition: box-shadow .25s, transform .25s; }
+.channel-cell:hover { box-shadow: var(--card-shadow-lift); transform: translateY(-2px); }
+.channel-cell canvas { border-radius: 8px; display: block; width: 100%; height: auto; }
+
+/* ── 状态徽章 ── */
+.soft-pill { border-radius: 999px; padding: 1px 10px; font-size: 12px; font-weight: 500; display: inline-block; }
+
+/* ── 快捷评语 chips ── */
+.preset-chip {
+  border: 1px solid var(--line); background: #fff; border-radius: 999px; padding: 4px 12px;
+  font-size: 12px; color: var(--ink-2); cursor: pointer; transition: all .2s;
+}
+.preset-chip:hover, .preset-chip.on { border-color: var(--brand); color: var(--brand); background: var(--brand-soft); }
+
+/* ── 版本对比（全场关键画面） ── */
+.money-shot {
+  background: linear-gradient(135deg, #FBFDFE, #F2F7FA);
+  border: 1px solid var(--line); border-radius: 14px; padding: 18px;
+}
+.vs-badge {
+  position: absolute; left: 50%; top: 46%; transform: translate(-50%, -50%);
+  width: 40px; height: 40px; border-radius: 50%; background: #fff; border: 1px solid var(--line);
+  display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--brand);
+  box-shadow: var(--card-shadow); font-size: 13px; z-index: 2;
+}
+
+/* ── 滚动条 ── */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: #C9D6E0; border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: #AFC2CF; }
+::-webkit-scrollbar-track { background: transparent; }
+
+/* ── 表格 ── */
+.ant-table-thead > tr > th { background: #F7FAFC !important; color: var(--ink-2); font-weight: 600; }
+.ant-table-tbody > tr:hover > td { background: #F7FBFD !important; }

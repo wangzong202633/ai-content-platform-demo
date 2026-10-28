@@ -1,0 +1,29 @@
+
+  [32m[1mVITE[22m v5.4.21[39m  [2mready in [0m[1m268[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+[2m21:49:31[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/main.tsx[22m
+[2m21:50:54[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m
+[2m21:51:14[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Home.tsx[22m
+[2m21:51:44[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/ContentPreview.tsx[22m
+[2m21:51:57[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/ChannelFrames.tsx[22m
+[2m21:52:29[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/ContentDetail.tsx[22m
+[2m21:52:41[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Generate.tsx[22m
+[2m21:52:50[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Generate.tsx[22m
+[2m21:53:13[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Dashboard.tsx[22m
+[2m21:56:14[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/index.css[22m
+[2m21:56:14[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m
+[2m21:56:14[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Home.tsx[22m
+[2m22:21:19[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/pages/Home.tsx, /src/pages/Dashboard.tsx, /src/pages/Generate.tsx, /src/pages/Preferences.tsx, /src/pages/ContentDetail.tsx, /src/pages/ReviewCenter.tsx[22m
+[2m22:21:30[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Generate.tsx[22m
+[2m22:21:40[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Generate.tsx[22m
+[2m22:21:48[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Preferences.tsx[22m
+[2m22:22:06[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Preferences.tsx[22m
+[2m22:22:14[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Preferences.tsx[22m
+[2m22:22:19[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Preferences.tsx[22m
+[2m22:23:16[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Preferences.tsx[22m
+[2m22:23:30[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Home.tsx[22m
+[2m22:23:38[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Home.tsx[22m
+[2m22:23:51[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Home.tsx[22m
+[2m22:24:47[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Home.tsx[22m

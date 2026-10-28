@@ -1,0 +1,21 @@
+# 企业AI营销内容智能管理平台 · Demo 一键部署
+# 用法：docker compose up --build -d  →  http://localhost:8000
+services:
+  demo:
+    build: .
+    container_name: ai-content-demo
+    ports:
+      - "8000:8000"
+    environment:
+      DEMO_DB_PATH: /data/demo.db
+      # 离线剧本模式（默认，永不翻车）；接真实大模型改 0 并填下方配置
+      DEMO_OFFLINE: "1"
+      # LLM_API_BASE: https://ark.cn-beijing.volces.com/api/v3
+      # LLM_API_KEY: <your-key>
+      # LLM_MODEL: doubao-1-5-pro-32k-250115
+    volumes:
+      - demo-data:/data                # SQLite 数据持久化
+    restart: unless-stopped
+
+volumes:
+  demo-data:
